@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+	<link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>
+	<link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet' type='text/css'>
+	<link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Mouse Memoirs' rel='stylesheet' type='text/css'>
+	<link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet' type='text/css'>
+	<script>
+		WebFontConfig = {
+			google:
+				{ families: ["Cabin", "Open Sans", "Indie Flower", "Mouse Memoirs", "Kalam",] }, active: function () {
+					DrawTheChart(ChartData, ChartOptions, "chart-01", "HorizontalBar")
+				}
+		};
+	</script>
+	<script asyn src="./js/webfont.js">
+	</script>
+	<script src="./js/Chart.min.js"></script>
+	<script>
+		function DrawTheChart(ChartData, ChartOptions, ChartId, ChartType) {
+			eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).' + ChartType + '(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+		}
+	</script>
+</head>
+<link rel="stylesheet" href="./css/style.css" type="text/css">
+
+<body>
+	<canvas id="chart-01" width="1292" height="992" style="background-color:rgba(184,182,165,1);border:4px rgba(242,242,242,1) solid;border-radius:0px;width:1292px;height:992px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+	<script> function MoreChartOptions() { } var ChartData = {
+			labels: ["Alpine Linux",
+				"CentOS Minimal", "RancherOS", "CentOS Atomic Host",], datasets: [{ fillColor: ['rgba(10,170,250,1)', 'rgba(46,204,113,1)', 'rgba(240,24,67,1)', 'rgba(241,196,15,1)',], strokeColor: ['rgba(59,105,78,0.73)', 'rgba(252,252,252,1)', 'rgba(252,252,252,1)', 'rgba(252,252,252,1)',], pointColor: "rgba(46,204,113,1)", markerShape: "circle", pointStrokeColor: "rgba(59,105,78,1)", data: [100, 155, 118, 135,], title: "2013" },]
+		}; ChartOptions = { decimalSeparator: ".", thousandSeparator: ",", spaceLeft: 12, spaceRight: 12, spaceTop: 12, spaceBottom: 12, scaleLabel: "<%=value+''%>", yAxisMinimumInterval: 1, scaleShowLabels: true, scaleShowLine: true, scaleLineStyle: "solid", scaleLineWidth: 2, scaleLineColor: "rgba(250,250,250,0.56)", scaleOverlay: false, scaleOverride: false, scaleSteps: 10, scaleStepWidth: 10, scaleStartValue: 0, inGraphDataShow: true, inGraphDataTmpl: '<%=v3%>', inGraphDataFontFamily: "'Mouse Memoirs'", inGraphDataFontStyle: "normal normal", inGraphDataFontColor: "rgba(79,79,79,1)", inGraphDataFontSize: 20, inGraphDataPaddingX: 0, inGraphDataPaddingY: 5, inGraphDataAlign: "center", inGraphDataVAlign: "bottom", inGraphDataXPosition: 2, inGraphDataYPosition: 2, inGraphDataAnglePosition: 2, inGraphDataRadiusPosition: 2, inGraphDataRotate: 0, inGraphDataPaddingAngle: 0, inGraphDataPaddingRadius: 0, inGraphDataBorders: false, inGraphDataBordersXSpace: 1, inGraphDataBordersYSpace: 1, inGraphDataBordersWidth: 1, inGraphDataBordersStyle: "solid", inGraphDataBordersColor: "rgba(0,0,0,1)", legend: false, maxLegendCols: 5, legendBlockSize: 15, legendFillColor: 'rgba(255,255,255,0.00)', legendColorIndicatorStrokeWidth: 1, legendPosX: -2, legendPosY: 4, legendXPadding: 0, legendYPadding: 0, legendBorders: false, legendBordersWidth: 1, legendBordersStyle: "solid", legendBordersColors: "rgba(102,102,102,1)", legendBordersSpaceBefore: 5, legendBordersSpaceLeft: 5, legendBordersSpaceRight: 5, legendBordersSpaceAfter: 5, legendSpaceBeforeText: 5, legendSpaceLeftText: 5, legendSpaceRightText: 5, legendSpaceAfterText: 5, legendSpaceBetweenBoxAndText: 5, legendSpaceBetweenTextHorizontal: 5, legendSpaceBetweenTextVertical: 5, legendFontFamily: "'Indie Flower'", legendFontStyle: "normal normal", legendFontColor: "rgba(59,59,59,1)", legendFontSize: 21, showYAxisMin: true, rotateLabels: "smart", xAxisBottom: true, yAxisLeft: true, yAxisRight: false, graphTitleSpaceBefore: 5, graphTitleSpaceAfter: -35, graphTitleBorders: false, graphTitleBordersXSpace: 1, graphTitleBordersYSpace: 1, graphTitleBordersWidth: 1, graphTitleBordersStyle: "solid", graphTitleBordersColor: "rgba(0,0,0,1)", graphTitle: "RAM Consumption\n", graphTitleFontFamily: "'Kalam'", graphTitleFontStyle: "normal lighter", graphTitleFontColor: "rgba(92,91,91,0.83)", graphTitleFontSize: 40, scaleFontFamily: "'Cabin'", scaleFontStyle: "normal normal", scaleFontColor: "rgba(252,249,249,1)", scaleFontSize: 22, pointLabelFontFamily: "'Open Sans'", pointLabelFontStyle: "normal normal", pointLabelFontColor: "rgba(102,102,102,1)", pointLabelFontSize: 12, angleShowLineOut: true, angleLineStyle: "solid", angleLineWidth: 1, angleLineColor: "rgba(0,0,0,0.1)", percentageInnerCutout: 50, scaleShowGridLines: true, scaleGridLineStyle: "solid", scaleGridLineWidth: 1, scaleGridLineColor: "rgba(161,161,158,0.22)", scaleXGridLinesStep: 1, scaleYGridLinesStep: 3, segmentShowStroke: true, segmentStrokeStyle: "solid", segmentStrokeWidth: 2, segmentStrokeColor: "rgba(255,255,255,1.00)", datasetStroke: true, datasetFill: false, datasetStrokeStyle: "solid", datasetStrokeWidth: 3, bezierCurve: false, bezierCurveTension: 0.4, pointDotStrokeStyle: "solid", pointDotStrokeWidth: 2, pointDotRadius: 5, pointDot: true, scaleTickSizeBottom: 5, scaleTickSizeTop: 5, scaleTickSizeLeft: 5, scaleTickSizeRight: 5, graphMin: 0, barShowStroke: false, barBorderRadius: 11, barStrokeStyle: "solid", barStrokeWidth: 5, barValueSpacing: 6, barDatasetSpacing: 0, scaleShowLabelBackdrop: true, scaleBackdropColor: 'rgba(255,255,255,0.75)', scaleBackdropPaddingX: 2, scaleBackdropPaddingY: 2, animation: true, onAnimationComplete: function () { MoreChartOptions() } };
+		DrawTheChart(ChartData, ChartOptions, "chart-01", "HorizontalBar");
+
+	</script>
+
+
+	<script src="./js/incrementor.js"></script>
+</body>
+
+</html>
